@@ -1,0 +1,25 @@
+1.
+man - Podręcznik systemowy
+who - Wyświetlanie informacji o zalogowanych użytkownikach
+whoami - Wyświetlanie informacji (bieżacy uid) o użytkowniku z którego prawami działamy
+ls - Wyświetl zawartość folderu
+pwd - Wyświetlanie bieżącego katalogu
+ls -l - wyswietli zawartowsc katalogu oraz dodatkowe informacje
+cd - zmienia katalog
+mkdir - tworzy katalog
+rmdir - usuwa katalog
+rm - usuwa plik lub katalog
+exit - wychodzi sie 
+
+2. oznaczenia katalogów
+- bieżący - .
+- nadrzędny - ..
+- główny - /
+- domowy - ~
+
+3 symbole
+- korzystanie z argumentów polecenia
+d informacje o katalogu
+c plik wykorzystywany jako wejscie
+b - wszyzstkie argumenty sa tarktowane jako nie-shellowe
+I - przepisuje wynik polecenia do innego polecenia
