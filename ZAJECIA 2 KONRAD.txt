@@ -1,0 +1,54 @@
+1.
+mkdir st_2023
+cd st_2023
+mkdir Dane
+mkdir Teksty
+cd Teksty
+mkdir Listy
+mkdir Podania
+mkdir Programy
+cd Programy
+mkdir C
+mkdir Shell
+cd Shell
+mkdir Skrypty
+
+2.
+nano Zestawienie.txt
+cp Zestawienie.txt ~/st_2023/Teksty/Programy/Shell/Skrypty
+mv Zestawienie.txt śpis23.txt
+
+3.
+
+ln -s st_2023/Dane st_2023/Teksty/Podania/Odsylacz_Dane
+
+4.
+ln -s ~/st_2023/Teksty/Skrypty ~/st_2023/Teksty/Podania/Skrypty_Odsylacz
+
+5,
+ln -s ~/st_2023/Teksty/Zestawinie.txt ~/st_2023/Teksty/Listy
+
+6.
+rm -r Programy
+
+7.
+chmod 700 ~/st_2023/Teksty/Listy
+
+chmod 604 ~/st_2023/Teksty/Zestawienie.txt
+
+chmod 741 ~/st_2023>Teksty/Zestawienie.txt
+
+U G O
+
+
+
+
+
+
+
+
+
+
+
+
+^X =========== ctrl X
