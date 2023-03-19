@@ -40,13 +40,21 @@ chmod 741 ~/st_2023>Teksty/Zestawienie.txt
 
 U G O
 
+8.
+cd Dane
+nano Zapis.txt
+ls
+ls -l
+uzytkownik ma prawo do odczytu i zapisu, grupa do odczytu z pliku, pozostali do odczytu z pliku
 
+9.
+ls -l
+Do katalogu Dane użytkownik ma prawo odczytu, tworzenia i usuwania plików oraz wykonania - wejścia do katalogu, grupa i pozostali do odczytu i wykonania.
 
-
-
-
-
-
+10.
+umask 0117
+mkdir Test
+ls -l
 
 
 
