@@ -1,0 +1,32 @@
+1 zadanie
+cd
+mkdir Notatki
+mkdir Przepisy
+cd Notatki
+nano Zapiski.txt
+mkdir Kopie
+
+2 zadanie
+ln -s /home/domena/s164450/Notatki/Zapiski.txt /home/domena/s164450/Przepisy/AdZapisek
+
+3 zadanie
+
+chmod 744 Notatki
+chmod 764 Zapiski.txt
+
+4 zadanie
+
+umask 0027
+
+5 zadanie 
+nano Dane.txt
+ls -l -> -rw-r----- 1 s164450 domain users    0 04-13 16:57 Dane.txt
+	 -> drwxr-x--- 2 s164450 domain users 4096 04-13 16:57 Proba1
+
+6 zadanie
+cd Notatki
+ls -i -> 13116812 Kopie  13116810 Zapiski.txt
+
+
+7 zadanie
+ls + scieżka do pliku dane1

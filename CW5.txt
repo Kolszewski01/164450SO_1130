@@ -1,0 +1,41 @@
+1 Zadanie
+nano tekst24.03
+
+2 Zadanie 
+grep "^ala" *
+grep "$tola i ala" *
+grep 'a{1,2}l{1,2}[ao]' *
+grep '.l.|.ll.|.lll.' *
+grep '^ al{1,2}a' *
+grep 'o,' *
+grep '4[^*]' *
+
+3 Zadanie
+
+nn1=10
+nn2=5
+nn1=$[$nn2+$nn1]
+unset nn2
+
+4 Zadanie
+
+echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+PATH=$PATH:.
+
+5 Zadanie
+
+echo $PS1
+[\e]0;\u@\h: \w\a]${debian_chroot:+($debian_chroot)}\u@\h:\w$
+PS1='\u@\h:\w\d\s$'
+
+6 Zadanie
+PS1='\u@\h:\w$\s\t#'
+
+b)
+
+PS1='\u@\h:\w$#'
+
+7 Zadanie
+
+PS1='\u@\h:\w$'

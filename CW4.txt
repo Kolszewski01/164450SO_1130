@@ -1,0 +1,51 @@
+1 Zadanie
+a) cat > dane22
+pwd >> dane 22
+cat >> dane 22
+
+b)
+tree > drzewo
+cat drzewo dane22 > wynik
+
+c)
+cat drzewo dane22 wynik > jeden_plik
+
+d)
+w | wc -l -> 13 users
+
+e)
+
+ls | wc
+
+2 Zadanie
+a)
+find /home/domena/s164450 -maxdepth 1 -empty
+
+b)
+find /dev -type b | wc
+
+c)
+find /home/domena/s164450 -perm -u=r-x
+
+d)
+
+find . -type f -name "[a-f]*" -exec cat {} \;
+
+e)
+find ~/ -maxdepth 3 -type f -not -empty -mmin -30
+
+f)
+find / -type f -amin 30
+find / -type f -mmin 30
+find / -type f -cmin 30
+
+3 Zadanie
+a) 
+find /dev -type b | wc
+
+b)
+
+
+
+ 
+
