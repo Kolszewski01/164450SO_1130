@@ -1,0 +1,48 @@
+1.
+ps -e | wc -l
+ps -u root -f
+ps -ejH
+ps -p $$ -o pri=
+
+2.
+top
+htop
+ps -e -o pid,ppid,pri,cmd | grep top
+
+3.
+
+1 uname -r
+2 free -m
+3 cat /proc/cpuinfo
+4 free -m
+5 ls -l /dev | awk '{print $1, $3, $4, $10}'
+6 swapon -s
+7 pwdx $(pgrep bash)
+8 which bash
+
+9
+Polecenie i przełączniki: ps -o cmd -p $(pgrep bash)
+UID użytkownika: cat /proc/$(pgrep bash)/loginuid
+Zmienne środowiskowe: cat /proc/$(pgrep bash)/environ
+Status procesu: cat /proc/$(pgrep bash)/status
+10 lsof -p $(pgrep bash) | awk '{print $4, $9}'
+
+4.
+
+Minimalny zestaw stanów, który jest obowiązkowy dla każdego procesu to:
+
+TASK_RUNNING (bieżący stan procesu)
+TASK_INTERRUPTIBLE (stan oczekiwania na zdarzenie zewnętrzne)
+TASK_UNINTERRUPTIBLE (stan oczekiwania na zasób systemowy, w którym proces nie może być przerwany)
+TASK_STOPPED (stan zatrzymania procesu)
+TASK_TRACED (stan procesu, który jest śledzony przez debugger)
+TASK_DEAD (stan procesu, który został zakończony)
+TASK_WAKEKILL (stan procesu, który jest usuwany z kolejki oczekujących)
+TASK_WAKING (stan procesu, który jest wybudzany)
+Proces w stanie "uśpiony poza pamięcią" (ang. "sleeping in swap") znajduje się w obszarze wymiany (ang. swap), który jest częścią dysku twardego służącą jako dodatkowa pamięć wirtualna, gdy brakuje pamięci RAM. Proces jest przenoszony do obszaru wymiany, gdy nie jest aktywny i nie ma wystarczającej ilości wolnej pamięci RAM.
+
+Pierwszym stanem procesu jest TASK_RUNNING (bieżący stan procesu), a ostatnim stanem jest TASK_DEAD (stan procesu, który został zakończony).
+
+Termin "wywłaszczenie" (ang. preemption) odnosi się do sytuacji, w której procesor przerywa wykonywanie bieżącego procesu i przekazuje kontrolę innemu procesowi, który jest gotowy do wykonania. Jest to podstawowy mechanizm planowania w systemie operacyjnym, który zapewnia, że każdy proces otrzyma równy czas procesora.
+
+Proces "zasypia" (ang. sleep) w różnych sytuacjach, na przykład gdy oczekuje na zdarzenie zewnętrzne, jak np. odbiór danych z sieci, lub gdy nie ma wystarczającej ilości wolnej pamięci RAM. W takiej sytuacji proces może zostać przeniesiony do obszaru wymiany (swap) i uśpiony poza pamięcią RAM, aby zwolnić miejsce dla innych procesów.
